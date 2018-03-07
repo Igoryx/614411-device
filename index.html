@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <title>Device</title>
+</head>
+<body>
   <header class="header">
     <nav class="header-navigation">
       <span class="header-logo">
@@ -19,13 +19,13 @@
       <a class="compare" href="#">Сравнить</a>
       <a class="user-cart" href="#">Корзина</a>
       <div class="header-catalog">
-        <button class="header-catalog__button">каталог товаров</button>
-        <ul>
+        <span class="header-catalog__caption">каталог товаров</span>
+        <ul class="header-catalog__list">
           <li class="header-catalog__item">
             <a href="#">Виртуальная реальность</a>
           </li>
           <li class="header-catalog__item">
-            <a href="#">Моноподы для селфи</a>
+            <a href="catalog.html">Моноподы для селфи</a>
           </li>
           <li class="header-catalog__item">
             <a href="#">Экшн-камеры</a>
@@ -50,9 +50,9 @@
     <h1 class="visually-hidden">DEVICE shop</h1>
     <section class="slider">
       <div class="slide">
-        <img class="slide__image" src="#" width="384" height="486" alt="селфи палка"> 
+        <img class="slide__image" src="img/sliders/slider-1.png" width="384" height="486" alt="селфи палка"> 
         <span class="slide__count">01</span>
-        <h2>Делай селфи, как Бен Стиллер!</h2>
+        <span class="slide__caption">Делай селфи, как Бен Стиллер!</span>
         <p>
           Самая длинная палка для селфи доступна в нашем магазине.
           Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
@@ -64,9 +64,9 @@
         </table>
       </div>
       <div class="slide slide_hidden">
-        <img class="slide__image" src="#" width="384" height="486" alt="селфи палка"> 
+        <img class="slide__image" src="img/sliders/slider-2.png" width="345" height="485" alt="фитнесс-браслет"> 
         <span class="slide__count">02</span>
-        <h2>Худеем правильно!</h2>
+        <span class="slide__caption">Худеем правильно!</span>
         <p>
           Мотивирующие фитнес-браслеты помогут найти в себе силы 
           не пропускать занятия и соблюдать диету.
@@ -78,9 +78,9 @@
         </table>
       </div>
       <div class="slide slide_hidden">
-          <img class="slide__image" src="#" width="384" height="486" alt="селфи палка"> 
-          <span class="slide__count">01</span>
-          <h2>Порхает как бабочка жалит как пчела!</h2>
+          <img class="slide__image" src="img/sliders/slider-3.png" width="526" height="334" alt="квадрокоптер"> 
+          <span class="slide__count">03</span>
+          <span class="slide__caption">Порхает как бабочка жалит как пчела!</span>
           <p>
               Этот обычный, на первый взгляд, квадрокоптер оснащен 
               мощным лазером, замаскированным под стандартную камеру.
@@ -96,38 +96,38 @@
       <ul class="main-catalog__list">
         <li class="main-catalog__item">
           <a href="#">
-            <img class="item__image" src="#" width="160" height="160" alt="VR">
+            <img class="item__image" src="img/catalog-items/popular-1.svg" width="160" height="160" alt="VR">
             <p>Виртуальная реальность</p>
           </a>
 
         </li>
         <li class="main-catalog__item">
           <a href="#">
-            <img class="item__image" src="#" width="160" height="160" alt="Моноподы">
+            <img class="item__image" src="img/catalog-items/popular-2.svg" width="160" height="160" alt="Моноподы">
             <p>Моноподы для селфи</p>
           </a>
         </li>
         <li class="main-catalog__item">
           <a href="#">
-            <img class="item__image" src="#" width="160" height="160" alt="Экшн-камеры">
+            <img class="item__image" src="img/catalog-items/popular-3.svg" width="160" height="160" alt="Экшн-камеры">
             <p>Экшн-камеры</p>
           </a>
         </li>
         <li class="main-catalog__item">
           <a href="#">
-            <img class="item__image" src="#" width="160" height="160" alt="Фитнесс-браслеты">
+            <img class="item__image" src="img/catalog-items/popular-4.svg" width="160" height="160" alt="Фитнесс-браслеты">
             <p>Фитнесс-браслеты</p>
           </a>
         </li>
         <li class="main-catalog__item">
           <a href="#">
-            <img class="item__image" src="#" width="160" height="160" alt="Умные часы">
+            <img class="item__image" src="img/catalog-items/popular-5.svg" width="160" height="160" alt="Умные часы">
             <p>Умные часы</p>
           </a>
         </li>
         <li class="main-catalog__item">
           <a href="#">
-            <img class="item__image" src="#" width="160" height="160" alt="Квадрокоптеры">
+            <img class="item__image" src="img/catalog-items/popular-6.svg" width="160" height="160" alt="Квадрокоптеры">
             <p>Квадрокоптеры</p>
           </a>
         </li>
@@ -143,30 +143,50 @@
           <a class="options__button button" href="#">кредит</a></li>
       </ul>
       <div class="option__block">
-        <h3 class="block__caption">Доставка</h3>
-        <p>
-          Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
-        </p>
+        <div class="block1">
+          <span class="block1__caption">Доставка</span>
+          <p>
+            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+          </p>
+        </div>
+      </div>
+      <div class="option__block">
+        <div class="block2">
+          <span class="block2__caption">Гарантия</span>
+          <p>
+            Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+            Товар, не дом, конечно же.
+          </p>
+        </div>
+      </div>
+      <div class="option__block">
+        <div class="block3">
+          <span class="block3__caption">Кредит</span>
+          <p>
+            Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные 
+            условия кредита. Выгодные для нашего банка, разумеется.
+          </p>
+        </div>
       </div>
       <ul class="brands">
         <li class="brands__item">
           <a href="#">
-            <img src="#" width="260" height="100" alt="dji">
+            <img src="img/brands/dji.png" width="260" height="100" alt="dji">
           </a>
         </li>
         <li class="brands__item">
           <a href="#">
-            <img src="#" width="260" height="100" alt="spgadgets">
+            <img src="img/brands/spgadgets.png" width="260" height="100" alt="spgadgets">
           </a>
         </li>
         <li class="brands__item">
           <a href="#">
-            <img src="#" width="260" height="100" alt="goPro">
+            <img src="img/brands/gopro.png" width="260" height="100" alt="goPro">
           </a>
         </li>
         <li class="brands__item">
           <a href="#">
-            <img src="#" width="260" height="100" alt="vive">
+            <img src="img/brands/vive.png" width="260" height="100" alt="vive">
           </a>
         </li>
       </ul>
@@ -190,7 +210,7 @@
         <p>
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
         </p>
-        <img class="main-contacts__map" src="#" width="560" height="222" alt="карта">
+        <img class="main-contacts__map" src="img/map.png" width="560" height="222" alt="карта">
         <a class="main-contacts__button button" href="#">напишите нам</a>
       </section>
     </main>
@@ -209,9 +229,15 @@
         </ul>
       </div>
       <div class="footer__social">
-        <a class="social-icon social-icon_fb" href="#"></a>
-        <a class="social-icon social-icon_instagram" href="#"></a>
-        <a class="social-icon social-icon_twitter" href="#"></a>
+        <a class="social-icon social-icon_fb" href="https://facebook.com">
+          <img class="social-icon" src="img/icons/fb.png" width="32" height="32" alt="facebook">
+        </a>
+        <a class="social-icon social-icon_instagram" href="https:instagram.com">
+          <img class="social-icon" src="img/icons/inst.png" width="32" height="32" alt="instagram">
+        </a>
+        <a class="social-icon social-icon_twitter" href="https:twitter.com">
+          <img class="social-icon" src="img/icons/tw.png" width="32" height="32" alt="twitter">
+        </a>
       </div>
       <ul class="user-navigation  ">
           <li class="login-link">
