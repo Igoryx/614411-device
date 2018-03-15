@@ -3,48 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <title>Device</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&amp;subset=cyrillic" rel="stylesheet"> 
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
   <header class="header">
-    <nav class="header-navigation" aria-label="навигация по шапке сайта">
-      <span class="header-logo">
-        DEVICE
-      </span>
-      <input type="search" name="search" placeholder="Поиск по сайту">
-      <ul class="user-navigation">
-        <li class="login-link">
-          <a href="#">Войти</a>
-        </li>
-      </ul>
-      <a class="compare" href="#">Сравнить</a>
-      <a class="user-cart" href="#">Корзина</a>
-      <div class="header-catalog">
-        <span class="header-catalog__caption">каталог товаров</span>
-        <ul class="header-catalog__list">
-          <li class="header-catalog__item">
-            <a href="#">Виртуальная реальность</a>
-          </li>
-          <li class="header-catalog__item">
-            <a href="catalog.html">Моноподы для селфи</a>
-          </li>
-          <li class="header-catalog__item">
-            <a href="#">Экшн-камеры</a>
-          </li>
-          <li class="header-catalog__item">
-            <a href="#">Фитнесс-браслеты</a>
-          </li>
-          <li class="header-catalog__item">
-            <a href="#">Умные часы</a>
-          </li>
-          <li class="header-catalog__item">
-            <a href="#">Квадрокоптеры</a>
+    <div class="header-block">
+      <nav class="header-navigation" aria-label="навигация по шапке сайта">
+        <span class="header-logo">
+          DEVICE
+        </span>
+        <label class="header__search">
+          <input
+            type="search"
+            name="search"
+            placeholder="Поиск по сайту"
+          >
+        </label>
+        <ul class="user-navigation">
+          <li class="login-link">
+            <a href="#">Войти</a>
           </li>
         </ul>
-      </div>
-      <a class="delivery" href="#">доставка</a>
-      <a class="warranty" href="#">гарантия</a>
-      <a class="header-contacts" href="#">контакты</a>
-    </nav>
+        <a class="compare" href="#">Сравнить</a>
+        <a class="user-cart" href="#">Корзина</a>
+        <div class="header-catalog">
+          <span class="header-catalog__caption">каталог товаров</span>
+          <ul class="header-catalog__list">
+            <li class="header-catalog__item">
+              <a href="#">Виртуальная реальность</a>
+            </li>
+            <li class="header-catalog__item">
+              <a href="catalog.html">Моноподы для селфи</a>
+            </li>
+            <li class="header-catalog__item">
+              <a href="#">Экшн-камеры</a>
+            </li>
+            <li class="header-catalog__item">
+              <a href="#">Фитнесс-браслеты</a>
+            </li>
+            <li class="header-catalog__item">
+              <a href="#">Умные часы</a>
+            </li>
+            <li class="header-catalog__item">
+              <a href="#">Квадрокоптеры</a>
+            </li>
+          </ul>
+        </div>
+        <a class="delivery" href="#">доставка</a>
+        <a class="warranty" href="#">гарантия</a>
+        <a class="header-contacts" href="#">контакты</a>
+      </nav>
+    </div>
   </header>
   <main>
     <h1 class="visually-hidden">DEVICE shop</h1>
@@ -54,7 +64,7 @@
         <img class="slide__image" src="img/sliders/slider-1.png" width="384" height="486" alt="селфи палка"> 
         <span class="slide__count">01</span>
         <span class="slide__caption">Делай селфи, как Бен Стиллер!</span>
-        <p>
+        <p class="slide__description">
           Самая длинная палка для селфи доступна в нашем магазине.
           Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
         </p>
@@ -68,7 +78,7 @@
         <img class="slide__image" src="img/sliders/slider-2.png" width="345" height="485" alt="фитнесс-браслет"> 
         <span class="slide__count">02</span>
         <span class="slide__caption">Худеем правильно!</span>
-        <p>
+        <p class="slide__description">
           Мотивирующие фитнес-браслеты помогут найти в себе силы 
           не пропускать занятия и соблюдать диету.
         </p>
@@ -82,7 +92,7 @@
           <img class="slide__image" src="img/sliders/slider-3.png" width="526" height="334" alt="квадрокоптер"> 
           <span class="slide__count">03</span>
           <span class="slide__caption">Порхает как бабочка жалит как пчела!</span>
-          <p>
+          <p class="slide__description">
               Этот обычный, на первый взгляд, квадрокоптер оснащен 
               мощным лазером, замаскированным под стандартную камеру.
           </p>
@@ -145,7 +155,7 @@
       </ul>
       <div class="option__block">
         <div class="block1">
-          <span class="block1__caption">Доставка</span>
+          <span class="block__caption">Доставка</span>
           <p>
             Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
           </p>
@@ -153,7 +163,7 @@
       </div>
       <div class="option__block">
         <div class="block2">
-          <span class="block2__caption">Гарантия</span>
+          <span class="block__caption">Гарантия</span>
           <p>
             Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
             Товар, не дом, конечно же.
@@ -162,7 +172,7 @@
       </div>
       <div class="option__block">
         <div class="block3">
-          <span class="block3__caption">Кредит</span>
+          <span class="block__caption">Кредит</span>
           <p>
             Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные 
             условия кредита. Выгодные для нашего банка, разумеется.
@@ -172,21 +182,25 @@
       <ul class="brands">
         <li class="brands__item">
           <a href="#">
+            <img src="img/brands/logo-1.png" width="260" height="100" alt="dji">
             <img src="img/brands/dji.png" width="260" height="100" alt="dji">
           </a>
         </li>
         <li class="brands__item">
           <a href="#">
+            <img src="img/brands/logo-2.png" width="260" height="100" alt="spgadgets">
             <img src="img/brands/spgadgets.png" width="260" height="100" alt="spgadgets">
           </a>
         </li>
         <li class="brands__item">
           <a href="#">
+            <img src="img/brands/logo-3.png" width="260" height="100" alt="goPro">
             <img src="img/brands/gopro.png" width="260" height="100" alt="goPro">
           </a>
         </li>
         <li class="brands__item">
           <a href="#">
+            <img src="img/brands/logo-4.png" width="260" height="100" alt="vive">
             <img src="img/brands/vive.png" width="260" height="100" alt="vive">
           </a>
         </li>
@@ -216,7 +230,7 @@
       </section>
   </main>
   <footer class="footer">
-    <span class="footer__logo">
+    <span class="footer-logo">
       DEVICE
     </span>
     <p>
@@ -252,7 +266,7 @@
     <h2 class="visually-hidden">Форма обратной связи</h2>
     <form class="modal" action="https://echo.htmlacademy.ru" method="post">
       <label for="modal__name" >Ваше имя:</label>
-      <input type="text" id="modal__name" placeholder="Имя Фамилия" name="name" autofocus>
+      <input type="text" id="modal__name" placeholder="Имя Фамилия" name="name">
       <label for="modal__mail" >Ваше e-mail:</label>
       <input type="email" id="modal__mail" placeholder="email@example.com" name="e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
       <label for="modal__text">Текст письма:</label>

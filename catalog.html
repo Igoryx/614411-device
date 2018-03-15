@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Device</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&amp;subset=cyrillic" rel="stylesheet"> 
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
   <header class="header">
-    <nav class="header-navigation">
+    <nav class="header-navigation" aria-label="навигация по шапке сайта">
       <span class="header-logo">
         DEVICE
       </span>
-      <input type="text" name="search" value="Поиск по сайту">
+      <input class="visually-hidden header__input" type="search" name="search" placeholder="Поиск по сайту">
       <ul class="user-navigation">
         <li class="user-link">
           <a href="#">Валентин Петухов</a>
@@ -22,8 +24,8 @@
       <a class="compare" href="#">Сравнить</a>
       <a class="user-cart" href="#">Корзина</a>
       <div class="header-catalog">
-        <button class="header-catalog__button">каталог товаров</button>
-        <ul>
+        <span class="header-catalog__caption">каталог товаров</span>
+        <ul class="header-catalog__list">
           <li class="header-catalog__item">
             <a href="#">Виртуальная реальность</a>
           </li>
@@ -53,65 +55,111 @@
     <h1 class="visually-hidden">DEVICE shop</h1>
     <h2>Моноподы для селфи</h2>
     <ul class="breadcrumbs">
-        <li>Главная</li>
-        <li>Каталог товаров</li>
-        <li>Моноподы для селфи</li>
+      <li>Главная</li>
+      <li>Каталог товаров</li>
+      <li>Моноподы для селфи</li>
     </ul>
-    <section class="filter">
-      <form action="#">
+    <section>
+      <form class="filter" action="#">
         <h3>фильтр:</h3>
-        <span class="filter__option">Стоимость</span>
-        <!-- input type="range" will be here =) -->
-        <span class="filter__option">Цвет</span>
-        <ul class="option__color">
-          <li>
-              <label class="color__black">
-                  <input type="checkbox" id="black" name="color" value="black" checked>Черный
+        <div class="price-range">
+          <span>Стоимость</span>
+          <div class="price-range__image">
+            <!-- <fieldset>
+              <legend class="filter__option">Стоимость</legend>
+              <input type="range" name="price" >
+            </fieldset> -->
+          </div>
+        </div>
+        <fieldset class="filter__section filter-block">
+          <legend class="filter-block__caption">Цвет</legend>
+          <ul class="filter-block__options">
+            <li class="filter-block__option">
+              <input
+                class="visually-hidden"
+                type="checkbox"
+                id="filter-color-1"
+                name="color"
+                value="black"
+                checked
+              >
+              <label for="filter-color-1">Черный</label>
+            </li>
+            <li class="filter-block__option">
+              <input
+                class="visually-hidden"
+                type="checkbox"
+                id="white" 
+                name="color"
+                value="white"
+              >
+              <label for="white">Белый</label>
+            </li>
+            <li class="filter-block__option">
+              <input
+              class="visually-hidden"
+              type="checkbox"
+              id="blue"
+              name="color"
+              value="blue"
+              >Синий
+              <label for="blue">
               </label>
-          </li>
-          <li>
-              <label class="color__white">
-                  <input type="checkbox" id="white" name="color" value="white">Белый
+            </li>
+            <li class="filter-block__option">
+              <input
+              class="visually-hidden"
+              type="checkbox"
+              id="red"
+              name="color"
+              value="red"
+              >Красный
+              <label for="red">
               </label>
-          </li>
-          <li>
-            <label class="color__blue">
-              <input type="checkbox" id="blue" name="color" value="blue">Синий
-            </label>
-          </li>
-          <li>
-            <label class="color__red">
-              <input type="checkbox" id="red" name="color" value="red">Красный
-            </label>
-          </li>
-          <li>
-            <label class="color__pink">
-              <input type="checkbox" id="pink" name="color" value="pink">Розовый
-            </label>
-          </li>
-        </ul>
-        <span class="filter__option">Bluetooth</span>
-        <ul class="option__bt">
-          <li>
-            <label class="bt__yes">
-              <input type="radio" id="" name="bt" value="yes" checked>Есть
-            </label>
-          </li>
-          <li>
+            </li>
+            <li class="filter-block__option">
+              <label class="color__pink">
+                <input
+                class="visually-hidden"
+                type="checkbox"
+                id="pink"
+                name="color"
+                value="pink"
+              >Розовый
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend class="filter__option">Bluetooth</legend>
+          <ul class="option__bt">
+            <li>
+              <label class="bt__yes">
+                <input class="visually-hidden" type="radio" id="" name="bt" value="yes" checked>Есть
+              </label>
+            </li>
+            <li>
               <label class="bt__no">
-                  <input type="radio" id="" name="bt" value="no">Нет
-                </label>
-          </li>
-        </ul>
-        <a class="filter__button button" href="#">показать</a>
+                <input class="visually-hidden" type="radio" id="" name="bt" value="no">Нет
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="filter__button button" type="submit">показать</button>
       </form> 
     </section>
     <div class="sort-type">
       <span>сортировка:</span>
       <ul class="sort-type__option">
-        <li class="option_active">По цене</li>
-        <li>По типу</li>
-        <li>По популярности</li>
+        <li class="option_active">
+          <a class="option__link " href="#">По цене</a>
+        </li>
+        <li>
+          <a class="option__link" href="#">По типу</a>
+        </li>
+        <li>
+          <a class="option__link" href="#">По популярности</a>
+        </li>
       </ul>
     </div>
     <section class="cards">
@@ -163,7 +211,7 @@
       </nav>
   </main>
   <footer class="footer">
-      <span class="footer__logo">
+      <span class="footer-logo">
         DEVICE
       </span>
       <p>
@@ -177,23 +225,17 @@
         </ul>
       </div>
       <div class="footer__social">
-          <a class="social-icon social-icon_fb" href="https://facebook.com">
-            <img class="social-icon" src="img/icons/fb.png" width="32" height="32" alt="facebook">
-          </a>
-          <a class="social-icon social-icon_instagram" href="https:instagram.com">
-            <img class="social-icon" src="img/icons/inst.png" width="32" height="32" alt="instagram">
-          </a>
-          <a class="social-icon social-icon_twitter" href="https:twitter.com">
-            <img class="social-icon" src="img/icons/tw.png" width="32" height="32" alt="twitter">
-          </a>
-        </div>
+        <a class="social-icon social-icon_fb" href="https://facebook.com">facebook</a>
+        <a class="social-icon social-icon_instagram" href="https://instagram.com">instagram</a>
+        <a class="social-icon social-icon_twitter" href="https://twitter.com">twitter</a>
+      </div>
       <ul class="user-navigation  ">
-          <li class="user-link">
-            <a href="#">Валентин Петухов</a>
-          </li>
-          <li class="logout-link">
-            <a href="#">Выйти</a>
-          </li>
+        <li class="user-link">
+          <a href="#">Валентин Петухов</a>
+        </li>
+        <li class="logout-link">
+          <a href="#">Выйти</a>
+        </li>
       </ul>
       <a class="compare" href="#">Сравнить</a>
       <a class="user-cart" href="#">Корзина</a>
