@@ -19,6 +19,7 @@ body {
   font-size: 15px;
   color: rgba(0, 0, 0, 1);
   line-height: 30px;
+  font-weight: 300;
   text-align: left;
   
   background-color: #ffffff;
@@ -46,11 +47,11 @@ ul {
 
 .header-logo:hover, 
 .header-logo:focus {
-  color: rgba(0, 0, 0, 0.6);
+  opacity: 0.6;
 }
 
 .header-logo:active {
-  color: rgba(0, 0, 0, 0.3);
+  opacity: 0.3;
 }
 
 .header__search::before {
@@ -62,26 +63,26 @@ ul {
   background-repeat: no-repeat;
 }
 
-.header__search input {
-  color: rgba(0, 0, 0, 0.3);
+.header__search input[type="search"] {
+  opacity: 0.3;
   border: none;
   background-color: transparent;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: left;
 }
 
-.header__search input:hover,
-.header__search input:focus {
-  color: rgba(0, 0, 0, 0.6);
+.header__search input[type="search"]:hover {
+  opacity: 0.6;
 }
 
-.header__search input:active {
-  color: rgba(0, 0, 0, 1);
+.header__search input[type="search"]:focus {
+  opacity: 1;
 }
 
-.user-navigation {
-  display: inline-block;
-}
 
-.login-link::before {
+.user-link::before {
   content: "";
   background-image: url("../img/icons/user.svg");
   display: inline-block;
@@ -120,6 +121,10 @@ ul {
 .login-link:active,
 .compare:active,
 .user-cart:active {
+  opacity: 0.3;
+}
+
+.logout-link {
   opacity: 0.3;
 }
 
@@ -165,14 +170,14 @@ ul {
 .warranty:focus,
 .header-contacts:hover,
 .header-contacts:focus {
-  color: rgba(0, 0, 0, 0.6);
+  opacity: 0.6;
 }
 
 .header-catalog__caption:active,
 .delivery:active,
 .warranty:active,
 .header-contacts:active {
-  color: rgba(0, 0, 0, 0.3);
+  opacity: 0.3;
 }
 
 .header-block {
@@ -186,6 +191,24 @@ ul {
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+.main-block-caption {
+  font-size: 47px;
+  line-height: 48px;
+}
+
+.breadcrumbs li:not(:first-child)::before {
+  content: "";
+  width: 4px;
+  height: 7px;
+  background-image: url("../img/icons/nav-arrow.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.breadcrumbs {
+
 }
 
 .slide__caption {
@@ -226,20 +249,358 @@ ul {
   line-height: 24px;
 }
 
-.options__item a {
+
+
+.button {
   font-family: "Gilroy";
   font-size: 18px;
   line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  border: none;
+  background-color: transparent;
 }
 
-.block__caption {
+.option__block button {
   font-family: "Gilroy";
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.option__blocks {
+  background-color: #e5e5e5;
+}
+
+.brands__item img a:first-child {
+  opacity: 0;
+}
+
+.brands__item img a:last-child:hover {
+  opacity: 1;
+}
+
+section h3,
+.option__block h3 {
   font-size: 47px;
   line-height: 48px;
 }
 
-.brands__item img:hover {
+.delivery-options li {
+  list-style-image: url("../img/icons/slider-button.png");
+}
+
+.footer {
+  background-color: #464646;
+  color: #ffffff;
+}
+
+.footer-logo {
+  font-family: "Gilroy";
+  font-size: 48px;
+  line-height: 48px;
+  color: #ffc600;
+  
+}
+
+.footer-logo:hover, 
+.footer-logo:focus {
+  opacity: 0.6;
+}
+
+.footer-logo:active {
+  opacity: 0.3;
+}
+
+.options__list a{
+  font-family: "Gilroy";
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.options__list li:hover,
+.options__list li:focus {
+  opacity: 0.6;
+}
+
+.options__list li:active {
+  opacity: 0.3;
+}
+
+.footer__login-link a::before {
+  content: "";
+  background-image: url("../img/icons/footer-user.png");
+  display: inline-block;
+  width: 13px;
+  height: 12px;
+  background-repeat: no-repeat;
+}
+
+.footer__compare,
+.footer__user-cart,
+.footer__login-link a {
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+.footer__compare:hover,
+.footer__user-cart:hover,
+.footer__login-link a:hover,
+.footer__compare:focus,
+.footer__user-cart:focus,
+.footer__login-link a:focus {
   opacity: 1;
+}
+
+.footer__compare:active,
+.footer__user-cart:active,
+.footer__login-link a:active {
+  opacity: 0.3;
+}
+
+.social-icon_fb::before {
+  content: "";
+  background-image: url("../img/icons/fb.png");
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.social-icon_fb:hover::before,
+.social-icon_fb:focus::before {
+  opacity: 0.6;
+}
+.social-icon_fb:active::before {
+  opacity: 0.1;
+}
+
+.social-icon_instagram::before {
+  content: "";
+  background-image: url("../img/icons/inst.png");
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.social-icon_instagram:hover::before,
+.social-icon_instagram:focus::before {
+  opacity: 0.6;
+}
+.social-icon_instagram:active::before {
+  opacity: 0.1;
+}
+
+.social-icon_twitter::before {
+  content: "";
+  background-image: url("../img/icons/tw.png");
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.social-icon_twitter:hover::before,
+.social-icon_twitter:focus::before {
+  opacity: 0.6;
+}
+.social-icon_twitter:active::before {
+  opacity: 0.1;
+}
+
+.footer__html-logo img:hover,
+.footer__html-logo img:focus {
+  opacity: 0.6;
+}
+.footer__html-logo img:active {
+  opacity: 0.3;
+}
+
+.modal label {
+  font-family: "Gilroy";
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.modal input {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  opacity: 0.4;
+  background-color: #f2f2f2;
+}
+
+.modal__name input[type="text"] {
+  border: none;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: left;
+}
+
+textarea {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  opacity: 0.4;
+  background-color: #f2f2f2;
+}
+
+.filter h3,
+.sort-type-caption {
+  font-family: "Gilroy";
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.filter-block__caption,
+.card figcaption {
+  font-family: "Gilroy";
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.filter-block__options,
+.option__bt {
+  font-size: 14px;
+  line-height: 40px;
+} 
+
+input[type="checkbox"]:checked + label::before {
+  content: "";
+  background-image: url("../img/icons/checkbox-on.png");
+  width: 27px;
+  height: 23px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+input[type="checkbox"] + label:hover::before,
+input[type="checkbox"] + label:focus::before {
+  opacity: 0.6;
+}
+
+input[type="checkbox"] + label:active::before {
+  opacity: 1;
+}
+
+input[type="checkbox"] + label:before {
+  content: "";
+  background-image: url("../img/icons/checkbox-off.png");
+  width: 23px;
+  height: 23px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+input[type="radio"]:checked + label::before {
+  content: "";
+  background-image: url("../img/icons/radio-on.png");
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+input[type="radio"]:checked + label:hover::before,
+input[type="radio"]:checked + label:focus::before {
+  opacity: 0.6;
+}
+
+input[type="radio"]:checked + label:active::before {
+  opacity: 1;
+}
+
+input[type="radio"] + label::before {
+  content: "";
+  background-image: url("../img/icons/radio-off.png");
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+input[type="radio"] + label:hover::before,
+input[type="radio"] + label:focus::before {
+  opacity: 0.6;
+}
+
+input[type="radio"] + label:active::before {
+  opacity: 1;
+}
+
+.item__price {
+  font-family: "Gilroy-light";
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.option__link {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.option__link_deactive {
+  opacity: 0.4;
+}
+
+.card__compare-button {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  background-color: transparent;
+  border: none;
+  opacity: 0.5;
+}
+
+.card__compare-button:hover,
+.card__compare-button:focus {
+  opacity: 1;
+}
+
+.card__compare-button:active {
+  opacity: 0.2;
+}
+
+
+.pagination {
+  background-color: #ebebeb;
+}
+
+.pagination ul,
+.pagination button {
+  font-family: "Gilroy";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: inherit;
+  border: none;
+}
+.pagination__item:hover,
+.pagination__item:focus {
+  opacity: 0.6;
+}
+.pagination__item:active {
+  opacity: 1;
+}
+.pagination__item_deactive {
+  opacity: 0.3;
+}
+
+.footer__user-link a,
+.footer__logout-link a {
+  color: #ffffff;
 }

@@ -21,7 +21,7 @@
           >
         </label>
         <ul class="user-navigation">
-          <li class="login-link">
+          <li class="login-link user-link">
             <a href="#">Войти</a>
           </li>
         </ul>
@@ -89,19 +89,19 @@
         </table>
       </div>
       <div class="slide slide_hidden">
-          <img class="slide__image" src="img/sliders/slider-3.png" width="526" height="334" alt="квадрокоптер"> 
-          <span class="slide__count">03</span>
-          <span class="slide__caption">Порхает как бабочка жалит как пчела!</span>
-          <p class="slide__description">
-              Этот обычный, на первый взгляд, квадрокоптер оснащен 
-              мощным лазером, замаскированным под стандартную камеру.
-          </p>
-          <a class="slide__button button" href="#">подробнее</a>
-          <table class="slide__details">
-            <tr><td>800 м</td><td>50 м</td></tr>
-            <tr><th>Дальность полета</th><th>Радиус поражения</th></tr>
-          </table>
-        </div>
+        <img class="slide__image" src="img/sliders/slider-3.png" width="526" height="334" alt="квадрокоптер"> 
+        <span class="slide__count">03</span>
+        <span class="slide__caption">Порхает как бабочка жалит как пчела!</span>
+        <p class="slide__description">
+            Этот обычный, на первый взгляд, квадрокоптер оснащен 
+            мощным лазером, замаскированным под стандартную камеру.
+        </p>
+        <a class="slide__button button" href="#">подробнее</a>
+        <table class="slide__details">
+          <tr><td>800 м</td><td>50 м</td></tr>
+          <tr><th>Дальность полета</th><th>Радиус поражения</th></tr>
+        </table>
+      </div>
     </section>
     <section class="main-catalog">
       <h2 class="visually-hidden">Каталог товаров</h2>
@@ -144,41 +144,40 @@
         </li>
       </ul>
     </section>
-    <div class="options"></div>
-      <ul class="options__list">
-        <li class="options__item">
-          <a class="options__button button" href="#">доставка</a></li>
-        <li class="options__item">
-          <a class="options__button button" href="#">гарантия</a></li>
-        <li class="options__item">
-          <a class="options__button button" href="#">кредит</a></li>
-      </ul>
-      <div class="option__block">
+    <ul class="option__blocks">
+      <li class="option__block">
         <div class="block1">
-          <span class="block__caption">Доставка</span>
+          <button class="block__button button" type="button">Доставка</button>
+          <h3>Доставка</h3>
           <p>
             Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
           </p>
+          <img class="block__image" src="img/icons/delivery.png">
         </div>
-      </div>
-      <div class="option__block">
+      </li>
+      <li class="option__block">
         <div class="block2">
-          <span class="block__caption">Гарантия</span>
+          <button class="block__button button" type="button">Гарантия</button>
+          <h3>Гарантия</h3>
           <p>
             Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
             Товар, не дом, конечно же.
           </p>
+          <img class="block__image" src="img/icons/warranty.png">
         </div>
-      </div>
-      <div class="option__block">
+      </li>
+      <li class="option__block">
         <div class="block3">
-          <span class="block__caption">Кредит</span>
+          <button class="block__button button" type="button">Кредит</button>
+          <h3>Кредит</h3>
           <p>
             Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные 
             условия кредита. Выгодные для нашего банка, разумеется.
           </p>
+          <img class="block__image" src="img/icons/credit.png">
         </div>
-      </div>
+      </li>
+    </ul>
       <ul class="brands">
         <li class="brands__item">
           <a href="#">
@@ -237,37 +236,49 @@
       г. Москва, ул. Строителей, 15
     </p>
     <div class="footer__options">
-      <ul>
-        <li>доставка</li>
-        <li>гарантия</li>
-        <li>контакты</li>
+      <ul class="options__list">
+        <li>
+          <a href="#">доставка</a>
+        </li>
+        <li>
+          <a href="#">гарантия</a>
+        </li>
+        <li>
+          <a href="#">контакты</a>
+        </li>
       </ul>
     </div>
     <div class="footer__social">
-      <a class="social-icon social-icon_fb" href="https://facebook.com">facebook</a>
-      <a class="social-icon social-icon_instagram" href="https://instagram.com">instagram</a>
-      <a class="social-icon social-icon_twitter" href="https://twitter.com">twitter</a>
+      <a class="social-icon social-icon_fb" href="https://facebook.com"><span class="visually-hidden">facebook</span></a>
+      <a class="social-icon social-icon_instagram" href="https://instagram.com"><span class="visually-hidden">instagram</span></a>
+      <a class="social-icon social-icon_twitter" href="https://twitter.com"><span class="visually-hidden">twitter</span></a>
     </div>
-    <ul class="user-navigation">
-        <li class="login-link">
+    <ul class="footer__user-navigation">
+        <li class="footer__login-link">
           <a href="#">Войти</a>
         </li>
     </ul>
-    <a class="compare" href="#">Сравнить</a>
-    <a class="user-cart" href="#">Корзина</a>
+    <a class="footer__compare" href="#">Сравнить</a>
+    <a class="footer__user-cart" href="#">Корзина</a>
+
+
+    <!-- <object class="svg" type="image/svg+xml" data="img/icons/cart.svg">
+    </object> -->
+    
+    
     <span>Тел.: +7(495)795-95-95</span>
     <div class="footer__html-logo">
       <a href="https://htmlacademy.ru">
-        <img src="img/icons/logo-html.svg" alt="ссылка на html академию">
+        <img src="img/icons/logo-html.png" alt="ссылка на html академию">
       </a>
     </div>
   </footer>
   <section class="modal-write-us">
     <h2 class="visually-hidden">Форма обратной связи</h2>
     <form class="modal" action="https://echo.htmlacademy.ru" method="post">
-      <label for="modal__name" >Ваше имя:</label>
+      <label for="modal__name">Ваше имя:</label>
       <input type="text" id="modal__name" placeholder="Имя Фамилия" name="name">
-      <label for="modal__mail" >Ваше e-mail:</label>
+      <label for="modal__mail">Ваше e-mail:</label>
       <input type="email" id="modal__mail" placeholder="email@example.com" name="e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
       <label for="modal__text">Текст письма:</label>
       <textarea id="modal__text" name="text" placeholder="В свободной форме"></textarea>
