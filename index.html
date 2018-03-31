@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Device</title>
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&amp;subset=cyrillic" rel="stylesheet"> 
   <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
   <header class="header">
-    <div class="header-block">
-    <div class="header-block2">
     <nav class="header-navigation" aria-label="навигация по шапке сайта">
       <span class="header-logo">
         DEVICE
@@ -17,11 +16,8 @@
       <div class="header-navigation-wrapper">
         <form class="header__search-wrapper" action="https://echo.htmlacademy.ru" method="get">
           <label class="header__search">
-            <input
-              type="search"
-              name="search"
-              placeholder="Поиск по сайту"
-            >
+            <span class="visually-hidden">Поиск по сайту</span>
+            <input type="search" name="search" placeholder="Поиск по сайту">
           </label>
           <button class="header__search-button" type="submit">Найти</button>
         </form>
@@ -39,7 +35,7 @@
       </div>
       <div class="header-options">
         <div class="header-catalog">
-          <span class="header-catalog__caption header-link">каталог товаров</span>
+          <button class="header-catalog__caption">каталог товаров</button>
           <div class="header-catalog__list-wrapper">
             <ul class="header-catalog__list">
               <li class="header-catalog__item">
@@ -75,14 +71,12 @@
         </div>
       </div>
     </nav>
-  </div>
-  </div>
   </header>
   <main>
     <h1 class="visually-hidden">DEVICE shop</h1>
     <section class="slide-section">
       <h2 class="visually-hidden">Топ товары</h2>
-      <div class="slide-wrapper  slide_hidden">
+      <div class="slide-wrapper slide_hidden">
         <div class="slide__image-wrapper">
           <img class="slide__image" src="img/sliders/slider-1.png" width="384" height="486" alt="селфи палка"> 
         </div>
@@ -350,7 +344,6 @@
         <div class="right-block-wrapper">
           <ul class="footer__user-navigation">
               <li class="footer__login-link">
-                  
                 <a href="#">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    width="13px" height="12px" viewBox="0 0 13 12" enable-background="new 0 0 13 12" xml:space="preserve">
@@ -360,28 +353,30 @@
                 </a>
               </li>
           </ul>
-          <a class="footer__compare" href="#">
-            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-             width="10px" height="10px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve">
-             <rect fill="#ffc600" x="8" y="2" width="1.984" height="8"/>
-             <rect fill="#ffc600" y="3" width="1.984" height="7"/>
-             <rect fill="#ffc600" x="4" width="2" height="10"/>
-            </svg><span>Сравнить</span>
-          </a>
-          <a class="footer__user-cart" href="#">
-            <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              width="12px" height="12px" viewBox="0 0 12 12" enable-background="new 0 0 12 12" xml:space="preserve">
-              <g>
-              <path fill="#ffc600" d="M11.864,3.017c-0.082-0.098-0.203-0.154-0.327-0.154H9.225V4.09c0,0.563-0.484,1.022-1.08,1.022
-              c-0.594,0-1.078-0.458-1.078-1.022V2.863H4.909V4.09c0,0.563-0.485,1.022-1.08,1.022c-0.595,0-1.078-0.458-1.078-1.022V2.863H0.438
-              c-0.125,0-0.243,0.056-0.327,0.154C0.028,3.115-0.012,3.245,0.003,3.375l0.776,7.134c0.015,0.806,0.642,1.455,1.411,1.455h7.595
-              c0.77,0,1.396-0.649,1.411-1.455l0.776-7.134C11.987,3.245,11.946,3.115,11.864,3.017z"/>
-              <path fill="#ffc600" d="M3.829,4.499c0.239,0,0.433-0.184,0.433-0.409V1.84c0-0.632,0.672-1.022,1.295-1.022h1.079
-              c0.655,0,1.078,0.401,1.078,1.022v2.25c0,0.225,0.194,0.409,0.431,0.409c0.239,0,0.433-0.184,0.433-0.409V1.84
-              C8.577,0.773,7.761,0,6.636,0H5.557C4.367,0,3.398,0.826,3.398,1.84v2.25C3.398,4.315,3.592,4.499,3.829,4.499z"/>
-              </g>
-            </svg><span>Корзина</span>
-          </a>
+          <div class="footer-options-wrapper">
+            <a class="footer__compare" href="#">
+              <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              width="10px" height="10px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve">
+              <rect fill="#ffc600" x="8" y="2" width="1.984" height="8"/>
+              <rect fill="#ffc600" y="3" width="1.984" height="7"/>
+              <rect fill="#ffc600" x="4" width="2" height="10"/>
+              </svg><span>Сравнить</span>
+            </a>
+            <a class="footer__user-cart" href="#">
+              <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="12px" height="12px" viewBox="0 0 12 12" enable-background="new 0 0 12 12" xml:space="preserve">
+                <g>
+                <path fill="#ffc600" d="M11.864,3.017c-0.082-0.098-0.203-0.154-0.327-0.154H9.225V4.09c0,0.563-0.484,1.022-1.08,1.022
+                c-0.594,0-1.078-0.458-1.078-1.022V2.863H4.909V4.09c0,0.563-0.485,1.022-1.08,1.022c-0.595,0-1.078-0.458-1.078-1.022V2.863H0.438
+                c-0.125,0-0.243,0.056-0.327,0.154C0.028,3.115-0.012,3.245,0.003,3.375l0.776,7.134c0.015,0.806,0.642,1.455,1.411,1.455h7.595
+                c0.77,0,1.396-0.649,1.411-1.455l0.776-7.134C11.987,3.245,11.946,3.115,11.864,3.017z"/>
+                <path fill="#ffc600" d="M3.829,4.499c0.239,0,0.433-0.184,0.433-0.409V1.84c0-0.632,0.672-1.022,1.295-1.022h1.079
+                c0.655,0,1.078,0.401,1.078,1.022v2.25c0,0.225,0.194,0.409,0.431,0.409c0.239,0,0.433-0.184,0.433-0.409V1.84
+                C8.577,0.773,7.761,0,6.636,0H5.557C4.367,0,3.398,0.826,3.398,1.84v2.25C3.398,4.315,3.592,4.499,3.829,4.499z"/>
+                </g>
+              </svg><span>Корзина</span>
+            </a>
+          </div>
         </div>
       </div>
       <div class="second-line-wrapper">
@@ -410,7 +405,7 @@
       </div>
       <div class="footer__html-logo">
         <a href="https://htmlacademy.ru">
-          <img src="img/icons/logo-html.png" alt="ссылка на html академию">
+          <img src="img/icons/logo-html.png" width="27" height="35" alt="ссылка на html академию">
         </a>
       </div>
     </div>
@@ -433,6 +428,11 @@
       <textarea id="modal__text" name="text" placeholder="В свободной форме"></textarea>
       <button class="submit-button button" class="button" type="submit">отправить</button> 
     </form>
+    <button class="modal-close" type="button">Закрыть</button>
+  </section>
+  <section class="modal-map">
+    <h2 class="visually-hidden">Карта</h2>
+    <img src="img/map-big.png" width="960" height="559" alt="Наш адрес: г.Москва, ул.Строителей 15">
     <button class="modal-close" type="button">Закрыть</button>
   </section>
 </body>
