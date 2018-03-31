@@ -256,17 +256,29 @@ margin-left: 16px;
 
 }
 
+.header-catalog__item:last-child {
+  height: 100%;
+}
+
 .header-catalog__list-wrapper {
   width: 1160px;
-  min-height: 160px;
+  min-height: 165px;
   background-color: #f7e296;
   z-index: 1;
   position: absolute;
   margin-left: -60px;
+  top: 174px;
 
   visibility: hidden; 
 }
 
+.header-catalog__caption:hover + .header-catalog__list-wrapper {
+  visibility: visible;
+}
+
+.header-catalog__list-wrapper:hover {
+  visibility: visible;
+}
 
 .header-catalog__item a {
   font-family: 'Open Sans', Arial, sans-serif;
