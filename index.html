@@ -15,10 +15,10 @@
       </span>
       <div class="header-navigation-wrapper">
         <form class="header__search-wrapper" action="https://echo.htmlacademy.ru" method="get">
-          <label class="header__search">
+          <label class="header__search" for="search">
             <span class="visually-hidden">Поиск по сайту</span>
-            <input type="search" name="search" placeholder="Поиск по сайту">
           </label>
+          <input type="search" name="search" id="search" placeholder="Поиск по сайту">
           <button class="header__search-button" type="submit">Найти</button>
         </form>
         <div class="header-navigation-container">
@@ -423,7 +423,7 @@
       <div class="modal__ident-wrapper">
         <p>
           <label for="modal__name">Ваше имя:</label><br>
-          <input type="text" id="modal__name" placeholder="Имя Фамилия" name="name" pattern="[A-Za-zА-Яа-яЁё]{3,}">
+          <input type="text" id="modal__name" placeholder="Имя Фамилия" name="name" pattern="[A-Za-zА-Яа-яЁё ]{3,}">
         </p>
         <p>
           <label for="modal__mail">Ваше e-mail:</label><br>

@@ -59,9 +59,21 @@ img {
 }
 
 .header__search {
-  width: 315px;
+/*   width: 315px; */
   position: relative;
-  padding-left: 38px;
+  flex-grow: 1;
+  height: 45px;
+  border-bottom: 2px solid transparent;
+  position: absolute;
+}
+
+.header__search-wrapper {
+  width: 441px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 .header__search::before {
@@ -76,7 +88,7 @@ img {
 
 }
 
-.header__search input[type="search"] {
+.header__search-wrapper input[type="search"] {
   opacity: 0.3;
   border: none;
   background-color: transparent;
@@ -84,14 +96,51 @@ img {
   font-size: 15px;
   line-height: 30px;
   text-align: left;
+  flex-grow: 1;
+  padding-top: 8px;
+  margin-left: 39px;
+  padding-right: 10px;
 }
 
-.header__search input[type="search"]:hover {
+.header__search-wrapper input[type="search"]:hover {
   opacity: 0.6;
 }
 
-.header__search input[type="search"]:focus {
+.header__search-wrapper input[type="search"]:focus {
   opacity: 1;
+}
+
+.header__search-wrapper:hover .header__search-button {
+  visibility: visible;
+}
+
+.header__search-wrapper {
+  border-bottom: 2px solid transparent;
+}
+
+.header__search-wrapper:hover  {
+  border-bottom: 2px solid black;
+}
+
+.header__search-button {
+  width: 85px;
+  height: 49px;
+  border: 2px solid black;
+  background-color: transparent;
+  font: inherit;
+  padding: 0;
+  visibility: hidden;
+  flex-grow: 0;
+}
+
+.header__search-button:hover,
+.header__search-button:focus {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.header__search-button:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .user-link {
@@ -169,6 +218,7 @@ margin-left: 16px;
   cursor: pointer;
   background-color: inherit;
   border: none;
+  padding: 0;
 }
 
 
@@ -438,8 +488,13 @@ section h3,
 
 .modal input:focus {
  background-color: #ffffff;
- border: 2px solid #f7e296;
- outline: none;
+ outline: 2px solid #f7e296;
+ border: none;
+}
+
+.modal input:invalid {
+  background-color: rgba(237, 181, 181, 0.5);
+  outline: none;
 }
 
 textarea {
@@ -459,8 +514,8 @@ textarea:hover {
 
 textarea:focus {
   background-color: #ffffff;
-  border: 2px solid #f7e296;
-  outline: none;
+  outline: 2px solid #f7e296;
+  border: none;
 }
 
 
@@ -495,47 +550,7 @@ textarea:focus {
 
 body {
   min-width: 1200px;
-  min-height: 2795px;
 }
-
-.header__search-wrapper {
-  width: 441px;
-  height: 45px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header__search input[type="search"] {
-  width: 100%;
-  padding-top: 8px;
-  
-}
-
-.header__search:focus + .header__search-button {
-  visibility: visible;
-}
-
-.header__search:focus {
-  border-bottom: 2px solid black;
-}
-
-.header__search {
-  flex-grow: 1;
-  height: 45px;
-  border-bottom: 2px solid transparent;
-}
-
-.header__search-button {
-  width: 85px;
-  height: 49px;
-  border: 2px solid black;
-  background-color: transparent;
-  font: inherit;
-  padding: 0;
-  margin-top: -1px;
-  visibility: hidden;
-}
-
 
 .inner-header-block {
   width: 1160px;
@@ -1390,8 +1405,6 @@ fieldset {
   border: none;
 }
 
-
-
 .caption-wrapper h3,
 .sort-type-caption {
   font-family: "Gilroy";
@@ -1445,12 +1458,12 @@ input[type="checkbox"]:checked + label::before {
   left: -40px;
 }
 
-input[type="checkbox"] + label:hover::before,
-input[type="checkbox"] + label:focus::before {
+input[type="checkbox"]:not(:disabled) + label:hover::before,
+input[type="checkbox"]:not(:disabled) + label:focus::before {
   opacity: 0.6;
 }
 
-input[type="checkbox"] + label:active::before {
+input[type="checkbox"]:not(:disabled) + label:active::before {
   opacity: 1;
 }
 
@@ -1482,15 +1495,6 @@ input[type="radio"]:checked + label::before {
   left: -40px;
 }
 
-input[type="radio"]:checked + label:hover::before,
-input[type="radio"]:checked + label:focus::before {
-  opacity: 0.6;
-}
-
-input[type="radio"]:checked + label:active::before {
-  opacity: 1;
-}
-
 input[type="radio"] + label::before {
   content: "";
   background-image: url("../img/icons/radio-off.png");
@@ -1502,12 +1506,12 @@ input[type="radio"] + label::before {
   left: -40px;
 }
 
-input[type="radio"] + label:hover::before,
-input[type="radio"] + label:focus::before {
+input[type="radio"]:not(:disabled) + label:hover::before,
+input[type="radio"]:not(:disabled) + label:focus::before {
   opacity: 0.6;
 }
 
-input[type="radio"] + label:active::before {
+input[type="radio"]:not(:disabled) + label:active::before {
   opacity: 1;
 }
 
@@ -1515,6 +1519,10 @@ input[type="radio"]:focus + label::before {
   outline-color: rgb(77, 144, 254);
   outline-width: 5px;
   outline-style: auto;
+}
+
+input:disabled + label {
+  opacity: 0.25;
 }
 
 .bt__input {
@@ -1555,7 +1563,6 @@ input[type="radio"]:focus + label::before {
 }
 
 .main-content-wrapper {
-  display: flex;
   background: linear-gradient(to right, #eeeeee 50%, #ffffff 50%);
 }
 
