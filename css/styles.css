@@ -1742,6 +1742,7 @@ input:disabled + label {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  width: 360px;
 }
 
 .card__cart-button {
