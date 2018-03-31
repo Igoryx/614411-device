@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Gilroy";
-  src: url('gilroy-extrabold.woff2') format('woff2');
+  src: url('gilroy-extrabold.woff2') format('woff2'), url('gilroyextrabold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy-light";
-  src: local('Gilroy Light'), local('Gilroy-Light'), url('Gilroylight.woff2') format('woff2'), url('Gilroylight.woff') format('woff'), url('Gilroylight.ttf') format('truetype');
+  src: url('Gilroylight.woff2') format('woff2'), local('Gilroy Light'), local('Gilroy-Light'), url('gilroylight.woff') format('woff'), url('Gilroylight.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
@@ -39,7 +39,7 @@ ul {
 
 img {
   max-width: 100%;
-  height: auto;
+/*   height: auto; */
 }
 .header-logo {
   font-family: "Gilroy", Arial, sans-serif;
@@ -59,7 +59,6 @@ img {
 }
 
 .header__search {
-/*   width: 315px; */
   position: relative;
   flex-grow: 1;
   height: 45px;
@@ -828,11 +827,11 @@ tr th:nth-child(2) {
 }
 
 .item__image {
-  margin: 0 auto;
+  margin: auto;
 }
 
 .main-catalog__item:nth-child(2) .item__image {
-  margin-top: auto;
+  margin: auto auto 0;
 }
 
 .item__description {
@@ -867,7 +866,7 @@ tr th:nth-child(2) {
 
 .service-options-wrapper {
   position: relative;
-  margin-top: 144px;
+  margin-top: 145px;
 }
 
 .service-options {
@@ -969,7 +968,7 @@ tr th:nth-child(2) {
 
 .service-option__image {
   margin-right: 65px;
-  margin-top: -20px;
+  margin-top: 10px;
 }
 
 /*----------------------BRANDS IMG----------------------*/
@@ -1013,7 +1012,7 @@ tr th:nth-child(2) {
   justify-content: space-between;
   margin-top: 137px;
   min-height: 513px;
-  margin-bottom: 90px;
+  margin-bottom: 89px;
 }
 
 .about-us {
@@ -1058,6 +1057,7 @@ tr th:nth-child(2) {
   line-height: 40px;
   margin-top: 31px;
   margin-left: 18px;
+  margin-bottom: 62px;
 }
 
 .delivery-options li {
@@ -1066,12 +1066,13 @@ tr th:nth-child(2) {
 
 .main-contacts__map {
   margin-top: 6px;
+  margin-bottom: 77px;
 }
 
 .delivery-options__button,
 .main-contacts__button {
   position: relative;
-  margin-top: auto;
+
   align-self: flex-start;
 }
 
@@ -1425,8 +1426,8 @@ fieldset {
 
 .filter-block__caption {
   position: relative;
-  margin-bottom: 22px;
-  margin-top: 81px;
+/*   margin-bottom: 22px;
+  margin-top: 81px; */
 }
 
 .filter-block__caption::before {
@@ -1539,14 +1540,14 @@ input:disabled + label {
 }
 
 .filter-block__options {
-  margin-top: -4px;
+  margin-top: 16px;
 }
 
 .sort-type {
   display: flex;
   width: 832px;
   align-items: center;
-  min-height: 70px;
+  height: 100%;
   background-color: #ebebeb;
 }
 
@@ -1554,6 +1555,10 @@ input:disabled + label {
   display: flex;
   margin: 0;
   padding: 0;
+}
+
+.line-wrapper .center {
+  min-height: 70px;
 }
 
 .line-wrapper {
@@ -1583,12 +1588,16 @@ input:disabled + label {
 .price-range {
   display: flex;
   flex-direction: column;
+  margin-top: 81px;
 }
 
+.price-range__image {
+  margin-top: 22px;
+}
 
 .option__bt {
   display: flex;
-  margin-top: -3px;
+  margin-top: 18px;
   flex-direction: column;
 }
 
