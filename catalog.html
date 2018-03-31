@@ -66,10 +66,10 @@
           </div>
         </div>
         <div class="header-links-wrapper">
-          <a class="delivery header-link" href="#">доставка</a>
+          <a class="header-link" href="#">доставка</a>
           <div class="header-links-add-wrapper">
-            <a class="warranty header-link" href="#">гарантия</a>
-            <a class="header-contacts header-link" href="#">контакты</a>
+            <a class="header-link" href="#">гарантия</a>
+            <a class="header-link" href="#">контакты</a>
           </div>
         </div>
       </div>
@@ -163,12 +163,12 @@
                   <input 
                     class="visually-hidden"
                     type="checkbox"
-                    id="filter-color-1"
+                    id="black"
                     name="color"
                     value="black"
                     checked
                   >
-                  <label class="checkbox checkbox-on" for="filter-color-1">Черный</label>
+                  <label class="checkbox checkbox-on" for="black">Черный</label>
                 </li>
                 <li class="filter-block__option">
                   <input 
@@ -218,11 +218,11 @@
               <legend class="filter-block__caption">Bluetooth</legend>
               <ul class="option__bt">
                 <li>
-                  <input class="visually-hidden" type="radio" id="yes" name="bt" value="yes" checked>
+                  <input class="visually-hidden" type="radio" id="yes" name="bluetooth" value="yes" checked>
                   <label class="bt__input" for="yes">Есть</label>
                 </li>
                 <li>
-                  <input class="visually-hidden" type="radio" id="no" name="bt" value="no">
+                  <input class="visually-hidden" type="radio" id="no" name="bluetooth" value="no">
                   <label class="bt__input" for="no">Нет</label>
                 </li>
               </ul>
@@ -242,8 +242,8 @@
                     <span class="item__price">500 руб.</span>
                   </figcaption>
                 </figure>
-                <button class="card__cart-button button" type="button">в корзину</button>
-                <button class="card__compare-button">Добавить к сравнению</button>
+                <a class="card__cart-button button" href="#">в корзину</a>
+                <a class="card__compare-button" href="#">Добавить к сравнению</a>
               </li>
               <li class="cards__item card">
                 <figure>
@@ -253,8 +253,8 @@
                     <span class="item__price">1 500 руб.</span>
                   </figcaption>
                 </figure>
-                <button class="card__cart-button button" type="button">в корзину</button>
-                <button class="card__compare-button">Добавить к сравнению</button>
+                <a class="card__cart-button button" href="#">в корзину</a>
+                <a class="card__compare-button" href="#">Добавить к сравнению</a>
               </li>
               <li class="cards__item card">
                 <figure>
@@ -264,8 +264,8 @@
                     <span class="item__price">2 500 руб.</span>
                   </figcaption>
                 </figure>
-                <button class="card__cart-button button" type="button">в корзину</button>
-                <button class="card__compare-button">Добавить к сравнению</button>
+                <a class="card__cart-button button" href="#">в корзину</a>
+                <a class="card__compare-button" href="#">Добавить к сравнению</a>
               </li>
               <li class="cards__item card">
                 <figure>
@@ -275,21 +275,21 @@
                     <span class="item__price">4 900 руб.</span>
                   </figcaption>
                 </figure>
-                <button class="card__cart-button button" type="button">в корзину</button>
-                <button class="card__compare-button">Добавить к сравнению</button>
+                <a class="card__cart-button button" href="#">в корзину</a>
+                <a class="card__compare-button" href="#">Добавить к сравнению</a>
               </li>
             </ul>
           </section>
           <nav class="pagination">
               <button class="pagination__button-back">назад</button>
               <ul>
-                <li class="pagination__item">
+                <li class="pagination__item pagination__item_active">
                   <a href="#">1</a>
                 </li>
-                <li class="pagination__item pagination__item_deactive">
+                <li class="pagination__item">
                   <a href="#">2</a>
                 </li>
-                <li class="pagination__item pagination__item_deactive">
+                <li class="pagination__item">
                   <a href="#">3</a>
                 </li>
               </ul>

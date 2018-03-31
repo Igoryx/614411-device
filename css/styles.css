@@ -184,9 +184,7 @@ margin-left: 16px;
 }
 
 .header-catalog__caption,
-.delivery,
-.warranty,
-.header-contacts {
+.header-link {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -238,19 +236,13 @@ margin-left: 16px;
 
 .header-catalog__caption:hover,
 .header-catalog__caption:focus,
-.delivery:hover,
-.delivery:focus,
-.warranty:hover,
-.warranty:focus,
-.header-contacts:hover,
-.header-contacts:focus {
+.header-link:hover,
+.header-link:focus {
   opacity: 0.6;
 }
 
 .header-catalog__caption:active,
-.delivery:active,
-.warranty:active,
-.header-contacts:active {
+.header-link:active {
   opacity: 0.3;
 }
 
@@ -1462,7 +1454,7 @@ input[type="checkbox"] + label:active::before {
   opacity: 1;
 }
 
-input[type="checkbox"] + label:before {
+input[type="checkbox"] + label::before {
   content: "";
   background-image: url("../img/icons/checkbox-off.png");
   width: 23px;
@@ -1471,6 +1463,12 @@ input[type="checkbox"] + label:before {
   position: absolute;
   top: -2px;
   left: -40px;
+}
+
+input[type="checkbox"]:focus + label::before {
+  outline-color: rgb(77, 144, 254);
+  outline-width: 5px;
+  outline-style: auto;
 }
 
 input[type="radio"]:checked + label::before {
@@ -1513,6 +1511,11 @@ input[type="radio"] + label:active::before {
   opacity: 1;
 }
 
+input[type="radio"]:focus + label::before {
+  outline-color: rgb(77, 144, 254);
+  outline-width: 5px;
+  outline-style: auto;
+}
 
 .bt__input {
   position: relative;
@@ -1775,7 +1778,7 @@ input[type="radio"] + label:active::before {
   opacity: 0.2;
 }
 
-.card:hover button {
+.card:hover a {
   visibility: visible;
 }
 
@@ -1813,11 +1816,14 @@ input[type="radio"] + label:active::before {
 .pagination__item:focus {
   opacity: 0.6;
 }
+
+.pagination__item {
+  opacity: 0.3;
+}
+
+.pagination__item_active,
 .pagination__item:active {
   opacity: 1;
-}
-.pagination__item_deactive {
-  opacity: 0.3;
 }
 
 .pagination button {
@@ -1845,3 +1851,4 @@ input[type="radio"] + label:active::before {
   margin-right: 2px;
   opacity: 0.3;
 }
+
