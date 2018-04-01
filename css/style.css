@@ -61,7 +61,6 @@ img {
           flex-grow: 1;
   height: 45px;
   border-bottom: 2px solid transparent;
-  /* position: absolute; */
 }
 
 .header__search-wrapper {
@@ -161,7 +160,7 @@ img {
   height: 12px;
   background-repeat: no-repeat;
   position: absolute;
-  top: 9px;
+  top: 5px;
   left: -1px;
 }
 
@@ -1181,7 +1180,7 @@ tr th:nth-child(2) {
 
 .main-contacts__map {
   margin-top: 6px;
-  margin-bottom: 77px;
+  margin-bottom: 68px;
 }
 
 .delivery-options__button,
@@ -1396,6 +1395,10 @@ tr th:nth-child(2) {
   background-color: #ffffff;
   padding: 100px;
   display: none;
+}
+
+.modal-show {
+  display: block;
 }
 
 .modal-close {
@@ -1615,8 +1618,6 @@ fieldset {
 
 .filter-block__caption {
   position: relative;
-/*   margin-bottom: 22px;
-  margin-top: 81px; */
 }
 
 .filter-block__caption::before {
@@ -1864,6 +1865,7 @@ input:disabled + label {
   -webkit-box-shadow: 0 2px #dadada;
           box-shadow: 0 2px #dadada;
   position: relative;
+  cursor: pointer;
 }
 
 .pin-1::before,
@@ -2002,6 +2004,7 @@ input:disabled + label {
   visibility: visible;
 }
 
+
 .card-description-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2059,6 +2062,34 @@ input:disabled + label {
 
 .card:hover a {
   visibility: visible;
+}
+
+.new {
+  font-family: "Gilroy";
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  position: absolute;
+  height: 64px;
+  top: 29px;
+  right: 91px;
+}
+
+.new::before {
+  content: "NEW";
+  position: absolute;
+  color: rgba(0, 0, 0, 0.2);
+  top: 22px;
+  left: 17px;
+}
+
+.new::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
 }
 
 .pagination {
