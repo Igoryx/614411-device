@@ -1697,6 +1697,10 @@ body {
   display: none;
 }
 
+.modal-map iframe {
+  border: 0;
+}
+
 .option-show {
   display: block;
 }
